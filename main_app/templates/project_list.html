@@ -8,7 +8,7 @@
 <h1 class="title pt-5">Taylor's Projects</h1>
 <div class="gallery">
   {% for project in projects %}
-  <a href="">
+  <a href="{% url 'project_detail' project.pk %}">
     <div class="card">
       <div class="card-image">
         <figure class="image is-square">

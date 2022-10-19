@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
 from .models import Project
+from django.views.generic import DetailView
 # Create your views here.
 
 
@@ -20,3 +21,9 @@ class ProjectList(TemplateView):
         context = super().get_context_data(**kwargs)
         context["projects"] =  Project.objects.all()# this is where we add the key into our context object for the view to use
         return context
+
+
+
+class ProjectDetail(DetailView):
+    model = Project
+    template_name = "project_detail.html"

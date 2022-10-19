@@ -8,6 +8,7 @@ class Project(models.Model):
     img = models.CharField(max_length=250)
     github = models.CharField(max_length=250)
     deploy = models.CharField(max_length=250)
+    bio = models.TextField(max_length=500, null=True)
     
 
     def __str__(self):
